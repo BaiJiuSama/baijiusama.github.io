@@ -1,0 +1,238 @@
+:root {
+	--headIconBorder-radius: 20px;
+	--font-style: 'Inter', sans-serif;
+	--font-color: rgb(243, 243, 243);
+	
+	--background-borderColor: rgba(104, 104, 104, .3);
+	--background-boxShadow: 0px 0px 10px rgba(67, 67, 67, .5);
+}
+
+.light {
+	background: linear-gradient(to right, rgb(128, 0, 255), rgb(7, 214, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+html, body {
+	margin: 0;	
+	padding: 0;
+	line-height: 1.5;
+	
+	font-family: var(--font-style);
+	color: var(--font-color);
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	max-width: 100%;
+	width: 100%;
+	max-height: 100%;
+	height: 100%;
+	
+	background-color: hsl(240 10% 3.9%);
+}
+
+a {
+	text-decoration: none;
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#backgroundCanvas {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+}
+
+splitLine {
+	width: 100%;
+	height: 1px;
+	
+	margin: 30px 0px 30px 0px;
+	
+	background-color: rgba(75, 75, 75, 0.5);
+}
+
+section {
+	font-size: 100%;
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	margin: 50px 200px 0px 200px;
+	padding: 25px;
+	
+	max-width: 800px;
+	width: 100%;
+	
+	border-radius: 15px;
+	border: 1px solid var(--background-borderColor);
+	box-shadow: var(--background-boxShadow);
+}
+
+section .headText {
+	font-size: 200%;
+	font-weight: 500;
+}
+
+section .headText::after {
+	content: '';
+	
+	display: block;	
+	
+	margin: 10px auto 0px auto;
+	border-radius: 20px;
+	
+	width: 80px;
+	height: 3px;
+	
+	background-color: white;
+}
+
+section .blockBox {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	
+	width: 100%;
+	height: auto;
+	box-sizing: border-box;
+	
+	margin-top: 20px;
+	padding: 20px;
+	
+	background-color: rgb(33, 33, 33);
+	
+	border-radius: 10px;
+}
+
+section .blockBox .borderText {
+	width: 100%;
+	
+	font-weight: bold;
+	font-size: 140%;
+	
+	margin: 20px 0px 10px 0px;
+	padding-left: 10px;
+	
+	border-left: white solid 4px;
+}
+
+section .blockBox .subBlock {
+	display: flex;
+	align-items: center;
+	
+	transition: 0.4s;
+	
+	width: 370px;
+	box-sizing: border-box;
+	
+	padding: 15px;
+	margin: 10px 0px 10px 0px;
+	
+	border-radius: 8px;
+	border: 1px solid hsl(240 10% 3.9%);
+	
+	background-color: hsl(240 10% 3.9%);
+}
+
+section .blockBox a {
+	color: var(--font-color);
+}
+
+section .blockBox a .subBlock:active {
+	transition: 0.2s;
+	transform: translateY(0.5px);
+	
+	color: rgb(116, 116, 116);
+	border: 1px solid rgb(126, 126, 126);
+} 
+
+section .blockBox img {
+	height: 20px;
+	
+	margin-right: 8px;
+}
+
+section .blockBox .subBlock:hover {
+	transition: 0.3s;
+	transform: translateY(-3px);
+	
+	border: 1px solid white;
+	box-shadow: 0px 3px 10px rgba(127, 127, 127, 0.5);
+}
+
+section p {
+	color: rgb(144, 144, 144);
+	
+	font-size: 100%;
+	font-weight: 400;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+	
+	padding: 20px 0px 10px 0px;
+	
+	border-bottom: var(--background-borderColor) solid 1px;
+	box-shadow: var(--background-boxShadow);
+}
+
+header img {
+	max-width: 120px;
+	width: 120px;
+	max-height: 120px;
+	height: 120px;
+	margin: 20px;
+	
+	border-radius: var(--headIconBorder-radius);
+	border: 2px solid white;
+	
+	background-color: black;
+}
+
+header .headText {
+	font-weight: 600;
+	font-size: 250%;
+}
+
+header p {
+	color: rgb(157, 157, 157);
+	font-weight: 260;
+	font-size: 130%;
+}
+
+bottom {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	width: 100%;
+	
+	margin-top: 50px;
+	padding: 50px 0 50px 0;
+	
+	border-top: var(--background-borderColor) solid 1px;
+}
